@@ -1,22 +1,10 @@
-name: nano bot
+import requests
+import time
+from datetime import datetime
 
-on:
-  workflow_dispatch
+url = "https://thenanobutton.com"
 
-jobs:
-  run:
-    runs-on: ubuntu-latest
-
-    steps:
-      - uses: actions/checkout@v3
-
-      - name: setup python
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.10'
-
-      - name: install libraries
-        run: pip install requests
-
-      - name: run bot
-        run: python bot.py
+while True:
+    requests.get(url)
+    print("click at:", datetime.now())
+    time.sleep(1)
