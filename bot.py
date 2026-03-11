@@ -1,5 +1,6 @@
 import requests
 import time
+from datetime import datetime
 
 url = "https://thenanobutton.com"
 
@@ -13,8 +14,8 @@ while True:
     try:
         requests.get(url, headers=headers)
         count += 1
-        print("click:", count)
+        print(f"Click {count} at {datetime.now()}")
     except:
-        print("error")
-
-    time.sleep(1)
+        print("Connection error")
+    
+    time.sleep(1)  # ضغطه واحدة كل ثانية
