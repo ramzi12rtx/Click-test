@@ -2,7 +2,7 @@ import requests
 import time
 from datetime import datetime
 
-url = "https://thenanobutton.com"
+url = "https://thenanobutton.com/tgElKw"
 
 headers = {
     "User-Agent": "Mozilla/5.0"
